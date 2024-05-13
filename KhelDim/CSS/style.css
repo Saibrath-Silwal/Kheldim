@@ -3,8 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: url(/images/image\ 3.png);
-    height: 100%; /* Replace with the height you want */
-    width: 100%; /* Replace with the width you want */
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,20 +13,22 @@ nav {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+    height: 10vh;
 }
 
 .headLine{
+    margin-top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: aqua;
+    padding: 0 20px;
 }
 
 .headLine button{
     border: 2px solid black;
     border-radius: 5px;
-    width: 5%;
-
+    padding: 5px 10px;
 }
 
 nav ul {
@@ -35,6 +36,8 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: space-around;
+    margin: 0;
+    padding-left: 0;
 }
 
 nav ul li a {
@@ -46,7 +49,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 10vh);
 }
 
 .search-container input {
@@ -60,5 +63,34 @@ nav ul li a {
 @media (max-width: 600px) {
     .search-container input {
         width: 80%;
+    }
+}
+
+
+/* Add this CSS for mobile responsiveness */
+@media (max-width: 768px) {
+    .headLine {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .headLine button {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Additional CSS for smaller screens if necessary */
+@media (max-width: 480px) {
+    .search-container input {
+        width: 90%;
     }
 }
